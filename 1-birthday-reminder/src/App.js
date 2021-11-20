@@ -5,12 +5,15 @@ import data from "./data";
 
 function App() {
   const [people, setPeople] = useState(data);
+  const handleClick = () => {
+    setPeople([])
+  }
   return (
     <main>
       <section className="container">
         <h3>{people.length} Birthdays today</h3>
         <List people={people} />
-        <button onClick={() => setPeople([])}> Clear All</button>
+        <button onClick={handleClick}> Clear All</button>
       </section>
     </main>
   );
