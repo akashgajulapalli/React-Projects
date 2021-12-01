@@ -6,16 +6,14 @@ const Review = () => {
   const [index, setIndex] = useState(0);
   const { name, job, image, text } = reviews[index];
   const handleClick1 = () => {
-    setIndex((index) => {
-      let newIndex = index - 1;
-      return checkNumber(newIndex);
-    });
+    let newIndex = index - 1;
+    let temp = checkNumber(newIndex);
+    setIndex(temp);
   };
   const handleClick2 = () => {
-    setIndex((index) => {
-      let newIndex = index + 1;
-      return checkNumber(newIndex);
-    });
+    let newIndex = index + 1;
+    let temp = checkNumber(newIndex);
+    setIndex(temp);
   };
   const checkNumber = (number) => {
     if (number > reviews.length - 1) {
@@ -28,10 +26,11 @@ const Review = () => {
   };
   const handleClick3 = () => {
     let randomNumber = Math.floor(Math.random() * reviews.length);
-    if(randomNumber === index){
-        randomNumber = index + 1 ;        
+    if (randomNumber === index) {
+      randomNumber = index + 1;
     }
-    setIndex(checkNumber(randomNumber));
+    const temp = checkNumber(randomNumber);
+    setIndex(temp);
   };
   return (
     <article className="review">

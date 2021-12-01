@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const SingleQuestion = (props) => {
-  const { id, title, info } = props;
+  const { data } = props;
+  const { title, info } = data;
   const [showInfo, setShowInfo] = useState(false);
   const handleClick = () => {
     setShowInfo(!showInfo);

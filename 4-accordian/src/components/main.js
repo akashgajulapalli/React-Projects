@@ -11,7 +11,7 @@ const Main = () => {
         <section className="info">
           {questions.length > 0
             ? questions.map((item) => {
-                return <SingleQuestion key={item.id} {...item} />;
+                return <SingleQuestion key={item.id}  data={item}   />;
               })
             : null}
         </section>
