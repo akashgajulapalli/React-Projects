@@ -32,7 +32,6 @@ const Tours = (props) => {
                   </p>
                   <button className="delete-btn" onClick={() => handleClick1(item.id)}>Not Intrested</button>
               </footer>
-
           </article>
       }) : null}</div>
     </section>
