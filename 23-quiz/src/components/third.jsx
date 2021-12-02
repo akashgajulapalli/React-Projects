@@ -32,14 +32,6 @@ class Third extends Component {
 
 
     }
-    // getData = () => {
-    //     let url = "https://jsonplaceholder.typicode.com/posts"
-    //     axios.get(url).then((response) => {
-    //         this.setState({
-    //             users: response.data
-    //         })
-    //     })
-    // }
     render() { 
         const{users} = this.state;
 
